@@ -23,13 +23,3 @@ footer {
   font-size: 14px;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.footer-content a {
-  color: #80c0ff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
