@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="{{url_for('static', filename = 'img/logo.png')}}" alt="Лого">
+                <span class="fs-4">NovaIT</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{ url_for('index')}}" class="nav-link active" aria-current="page">Головна сторінка</a></li>
+                <li class="nav-item"><a href="{{ url_for('learning')}}" class="nav-link">Навчання</a></li>
+                <li class="nav-item"><a href="{{ url_for('about')}}" class="nav-link">Про нас</a></li>
+            </ul>
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IT College.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
